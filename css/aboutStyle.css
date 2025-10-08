@@ -1,0 +1,249 @@
+:root {
+    --primary-bg-color: #292f36;
+    --secondary-bg-color: #1a1e23;
+    --primary-color: #12f7d6;
+    --secondary-color: #ffffff;
+    --tertiary-color: #e54f26;
+    --line-color: #43454d;
+    --devCard-bg-color: #98faec;
+    --devCard-border-color: #0c73b8;
+    --html-color: #e54f26;
+    --css-color: #0c73b8;
+    --js-color: #e7a020;
+    --bootstrap-color: #563d7c;
+    --tailwindCss-color: #4c1d95;
+    --typescript-color: #235A97;
+    --nodeJs-color: #68a063;
+    --mongoDB-color: #00ED64;
+    --color-palet1: #644dff;
+    --color-palet2: #4836bb;
+    --color-palet3: #654dff63;
+}
+
+
+
+
+
+
+
+
+/* Banner Section */
+
+.abtHero-sec {
+    padding: 100px 0;
+    background: url(../assets/images/skills-bg.png);
+    position: relative;
+}
+
+
+
+.abtBnr-card {
+    width: 530px;
+    height: 530px;
+    background: var(--primary-bg-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    &:hover {
+        cursor: grabbing;
+    }
+}
+
+.abtHero-bnrCard {
+    z-index: 1;
+    width: 440px;
+    height: 440px;
+    margin: 0 auto;
+
+}
+
+.abtHero-bnrCard>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.abtBnr-card::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 150%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.abtBnr-card::after {
+    content: '';
+    position: absolute;
+    background: var(--line-color);
+    ;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+
+
+.abtBnr-card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), rgb(108, 0, 191));
+    animation: rotBGimg 3.5s linear infinite;
+
+}
+
+
+.abtTitle-3 {
+    z-index: 1;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.abtDtl-card {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.abt-loader {
+    justify-content: center;
+}
+
+
+.dwn-button {
+    width: 184px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    background: var(--color-palet1);
+    border: 2px solid var(--color-palet2);
+    border-radius: .75rem;
+    box-shadow: 0 8px 0 var(--color-palet2);
+    transform: skew(-10deg);
+    transition: all .1s ease;
+    filter: drop-shadow(0 15px 20px var(--color-palet3));
+    cursor: pointer;
+
+}
+
+.dwn-button:active {
+    letter-spacing: 0px;
+    transform: skew(-10deg) translateY(8px);
+    box-shadow: 0 0 0 var(--color-palet3);
+}
+
+.abtCv-link {
+    font-size: 1.125em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+}
+
+.btn-up {
+    animation: btnUp infinite 0.6s linear;
+
+    &:hover {
+        animation: none;
+    }
+}
+
+@keyframes btnUp {
+
+    0%,
+    100% {
+        transform: skew(-10deg) translateX(0);
+    }
+
+    10% {
+        transform: skew(-10deg) translateX(-1px);
+    }
+
+    20% {
+        transform: skew(-10deg) translateX(-2px);
+    }
+
+    30% {
+        transform: skew(-10deg) translateX(-3px);
+    }
+
+    40% {
+        transform: skew(-10deg) translateX(-4px);
+    }
+
+    50% {
+        transform: skew(-10deg) translateX(-5px);
+    }
+
+    60% {
+        transform: skew(-10deg) translateX(-4px);
+    }
+
+    70% {
+        transform: skew(-10deg) translateX(-3px);
+    }
+
+    80% {
+        transform: skew(-10deg) translateX(-2px);
+    }
+
+    90% {
+        transform: skew(-10deg) translateX(-1px);
+    }
+}
+
+
+/* Responsive Section */
+
+@media screen and (max-width:768px) {
+
+    /* Banner Section */
+    .abtBnr-card {
+        width: 450px;
+        height: 450px;
+    }
+
+    .abtHero-bnrCard {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+
+
+
+@media screen and (max-width:576px) {
+
+    /* Banner Section */
+    .abtBnr-card {
+        width: 270px;
+        height: 270px;
+    }
+
+    .abtHero-bnrCard {
+        width: 180px;
+        height: 180px;
+    }
+
+    .abtTitle-3 {
+        font-size: 1.8rem;
+    }
+
+}

@@ -1,0 +1,126 @@
+:root {
+    --primary-bg-color: #292f36;
+    --secondary-bg-color: #1a1e23;
+    --primary-color: #12f7d6;
+    --secondary-color: #ffffff;
+    --tertiary-color: #e54f26;
+    --line-color: #43454d;
+    --devCard-bg-color: #98faec;
+    --devCard-border-color: #0c73b8;
+    --html-color: #e54f26;
+    --css-color: #0c73b8;
+    --js-color: #e7a020;
+}
+
+
+
+
+
+
+
+.hero-sec {
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-card {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 0 auto;
+    cursor: grabbing;
+}
+
+.hero-card>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.heroCard-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 50px;
+    background-color: var(--secondary-bg-color);
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+}
+
+.hero-card:hover .heroCard-content {
+    transform: rotateX(0deg);
+
+}
+
+
+
+.hero-card:hover svg {
+    scale: 0;
+}
+
+.heroCard-description {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+}
+
+
+/* Blog Content Section */
+
+.blogCntn-sec {
+    background: url(../assets/images/abtSec-img.png);
+    padding-bottom: 50px;
+}
+
+.blog-card {
+    margin: 40px 0;
+}
+
+
+.blog-title {
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+}
+
+/* Responsive Section */
+@media screen and (max-width:768px) {
+    .hero-card {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .hero-card {
+        width: 250px;
+        height: 250px;
+    }
+}

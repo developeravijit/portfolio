@@ -1,0 +1,89 @@
+/* ===== Custom Alert Popup ===== */
+
+#alert-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#custom-alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #111827; /* dark navy */
+  color: #e2e8f0; /* light gray text */
+  padding: 28px 42px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+  z-index: 9999;
+  text-align: center;
+  max-width: 340px;
+  width: 85%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  font-family: "Poppins", sans-serif;
+}
+
+#custom-alert.active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#alert-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+#alert-message {
+  font-size: 16px;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+#alert-close {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  color: #fff;
+  border: none;
+  padding: 9px 26px;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+}
+
+#alert-close:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px rgba(59, 130, 246, 0.6);
+}
+
+
+#custom-alert.success #alert-message {
+  color: #22d3ee; /* cyan accent */
+}
+
+#custom-alert.error #alert-message {
+  color: #f87171; /* soft red */
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

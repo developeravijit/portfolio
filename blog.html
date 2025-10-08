@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Avijit Roy Blogs</title>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Popup Alert Css -->
+    <link rel="stylesheet" href="./css/alert.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Custom Blog Section Css -->
+    <link rel="stylesheet" href="./css/blogStyle.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="hdr-sec">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container hdr-container">
+                <div class="nav-logo">
+                    <a class="navbar-brand" href="./index.html"><img src="./assets/images/logos.png" alt="" /></a>
+                </div>
+
+                <div class="social-link socialLink-collapsed">
+                    <ul class="example-2">
+                        <li class="icon-content">
+                            <a href="https://www.linkedin.com/in/avijit-roy-22a21a164/" target="_blank"
+                                aria-label="LinkedIn" data-social="linkedin">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">LinkedIn</div>
+                        </li>
+                        <li class="icon-content">
+                            <a href="https://github.com/Lucifer-2606" target="_blank" aria-label="GitHub"
+                                data-social="github">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16" xml:space="preserve">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">GitHub</div>
+                        </li>
+                        <li class="icon-content">
+                            <a href="https://www.instagram.com/avijitroy0098/" target="_blank" aria-label="Instagram"
+                                data-social="instagram">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16" xml:space="preserve">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">Instagram</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header me-auto">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <ul class="navbar-nav ms-auto mb-lg-0 radio-container">
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active hover-underline" href="./blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline" href="./index.html#skill-section">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline" href="./index.html#work-section">Works</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline" href="./index.html#contact-section">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="items-list d-flex">
+                        <div class="social-link">
+                            <ul class="example-2">
+                                <li class="icon-content">
+                                    <a href="https://www.linkedin.com/in/avijit-roy-22a21a164/" target="_blank"
+                                        aria-label="LinkedIn" data-social="linkedin">
+                                        <div class="filled"></div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"
+                                            xml:space="preserve">
+                                            <path
+                                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </a>
+                                    <div class="tooltip">LinkedIn</div>
+                                </li>
+                                <li class="icon-content">
+                                    <a href="https://github.com/Lucifer-2606" target="_blank" aria-label="GitHub"
+                                        data-social="github">
+                                        <div class="filled"></div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"
+                                            xml:space="preserve">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </a>
+                                    <div class="tooltip">GitHub</div>
+                                </li>
+                                <li class="icon-content">
+                                    <a href="https://www.instagram.com/avijitroy0098/" target="_blank"
+                                        aria-label="Instagram" data-social="instagram">
+                                        <div class="filled"></div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"
+                                            xml:space="preserve">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </a>
+                                    <div class="tooltip">Instagram</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-sec">
+            <div class="container">
+                <div class="app-grid">
+                    <button class="appGrid-icon">
+                        <i class="bi bi-grid"></i>
+                    </button>
+                    <ul class="grid-items">
+                        <li class="grid-links">
+                            <a href="./index.html" class="gridItem-links">
+                                <i class="bi bi-person"></i>
+                            </a>
+                        </li>
+                        <li class="grid-links">
+                            <a href="./blog.html" class="gridItem-links">
+                                <i class="bi bi-code-square"></i>
+                            </a>
+                        </li>
+                        <li class="grid-links">
+                            <a href="./about.html#contact-section" class="gridItem-links">
+                                <i class="bi bi-reply"></i>
+                            </a>
+                        </li>
+                        <li class="grid-links">
+                            <a href="./assets/resume/Avijit Roy Resume.pdf" download="Avijit-Roy-Resume"
+                                class="gridItem-links">
+                                <i class="bi bi-download"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-card">
+                    <img src="./assets/images/profileImg-2.png" alt="">
+                    <div class="heroCard-content skill-hdr">
+                        <h2 class="heroCard-title title-3">Blogs</h2>
+                        <div class="skill-line">
+                            <img src="./assets/images/skillLine.png" alt="" />
+                        </div>
+                        <p class="heroCard-description para">From curiosity to code—my experiences and insights in tech.
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section class="blogCntn-sec blog-sec">
+            <div class="container">
+                <div class="abt-card1 blog-card" id="blogPara-continue">
+                    <h2 class="title-2 blog-title">What does it take to become a web developer?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            Becoming a web developer takes curiosity, patience, and consistent practice. It starts with
+                            learning the core web technologies—HTML, CSS, and JavaScript—which together create the
+                            structure, style, and interactivity of websites. Understanding how these languages connect
+                            is the foundation of everything else.
+
+                            Beyond coding, problem-solving is essential. Every project brings challenges that require
+                            research, logical thinking, and attention to detail. Building small projects helps apply
+                            what you learn and builds confidence.
+
+                            A successful web developer also stays updated. Technology changes quickly, so continuous
+                            learning through tutorials, documentation, and community interaction keeps your skills
+                            relevant. Communication is equally important since developers often collaborate with
+                            designers or clients.
+
+                            In short, becoming a web developer means being open to learning every day, writing clean and
+                            functional code, and creating experiences that people can use and enjoy.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">Why did I move from the non-IT industry to the IT industry?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            After completing my BBA in 2019, I started working in the marketing field. My time in
+                            Bangalore was a valuable experience, but over time, I realized I wanted to build a career
+                            that offered both creativity and growth. When I returned to Kolkata, I didn’t feel
+                            professionally satisfied, and that made me reflect on what I truly wanted to do.
+
+                            While exploring different career paths, I discovered web development. I was drawn to how
+                            technology allows you to build something real from scratch. The best part was that it didn’t
+                            require an engineering degree—just skill and practice. That idea motivated me to start
+                            learning.
+
+                            Transitioning to IT gave me direction and purpose. It’s a field that rewards curiosity and
+                            problem-solving, and I’m glad I made the decision to shift. The journey from marketing to
+                            coding taught me that change can open doors to something much more meaningful.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">How did my journey start and how did I understand HTML, CSS, JS,
+                        Bootstrap, and Tailwind CSS?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            My web development journey began out of curiosity. I started exploring tutorials on YouTube
+                            and learning through Google and ChatGPT. At first, I didn’t have proper guidance, but I was
+                            determined to understand how websites are built.
+
+                            I began with HTML, learning how it structures a webpage. Then I moved on to CSS, which
+                            helped me understand design, layout, and visual appeal. Once I felt comfortable, I learned
+                            JavaScript, which brought interactivity to my projects. Later, I explored Bootstrap for
+                            faster, responsive design, and Tailwind CSS for greater customization using utility classes.
+
+                            Initially, I practiced by building small projects and experimenting with layouts. Each step
+                            gave me confidence and made my interest stronger. Eventually, I joined Webskitters Academy
+                            on July 7, 2025, for formal training as a Front-End Developer. Now, I’m building my own
+                            portfolio website and preparing for placement opportunities in November.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">What is HTML?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            HTML, or HyperText Markup Language, is the foundation of every website. It defines the
+                            structure and layout of content using elements like headings, paragraphs, links, and images.
+                            HTML isn’t a programming language—it’s a markup language that tells the browser how to
+                            display information.
+
+                            It uses tags enclosed in angle brackets, such as &lt;p&gt; for paragraphs or &lt;h1&gt; for
+                            headings. HTML also plays a key role in SEO and accessibility, helping search engines and
+                            assistive technologies understand a webpage’s structure.
+
+                            The latest version, HTML5, introduced powerful features like built-in video and audio
+                            support, semantic tags, and form enhancements. Together, these make websites faster, more
+                            interactive, and easier to maintain.
+
+                            In simple terms, HTML acts as the skeleton of a website—without it, nothing would appear on
+                            the screen. It’s the first and most essential step for anyone starting in web development.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">What is CSS?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            CSS, or Cascading Style Sheets, is what gives websites their visual design. It controls how
+                            elements look—the colors, fonts, spacing, and layout. While HTML builds the structure, CSS
+                            adds personality and style.
+
+                            With CSS, you can make a webpage responsive, ensuring it looks good on any device. Modern
+                            features like Flexbox and Grid make layout design much easier and cleaner than before. CSS
+                            also enables animations and transitions, improving user experience with smooth effects.
+
+                            The “cascading” part means styles are applied in a specific order, allowing flexibility in
+                            how rules are managed. Understanding this concept helps maintain clean and organized code.
+
+                            In short, CSS turns plain HTML into an attractive, user-friendly interface. For a web
+                            developer, mastering CSS means learning how to balance creativity with structure to make a
+                            website visually engaging and consistent.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">What is JavaScript?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            JavaScript is a programming language that brings interactivity to websites. While HTML
+                            structures a page and CSS styles it, JavaScript allows users to interact with it. It can
+                            respond to clicks, validate forms, update content dynamically, and control animations.
+
+                            It works closely with the DOM (Document Object Model), allowing developers to modify page
+                            elements without reloading. Modern JavaScript, enhanced by ES6 and later versions,
+                            introduced new features like arrow functions, classes, and modules, making code cleaner and
+                            more efficient.
+
+                            JavaScript isn’t limited to browsers. With tools like Node.js, it’s also used for backend
+                            development, making it one of the most versatile languages today.
+
+                            Simply put, JavaScript transforms static web pages into interactive experiences. It’s the
+                            skill that separates a functional site from an engaging one—and it’s a must for every modern
+                            web developer.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">What is Bootstrap?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            Bootstrap is a front-end framework that helps developers build responsive and consistent
+                            websites quickly. It includes pre-built components like buttons, forms, modals, and
+                            navigation bars, along with a powerful grid system for layout design.
+
+                            Using Bootstrap saves time and ensures your website looks good on all devices. Its built-in
+                            classes and JavaScript plugins make it easy to create modern designs without writing
+                            everything from scratch.
+
+                            One of Bootstrap’s greatest advantages is consistency—it helps maintain a uniform design
+                            across different pages and browsers. Developers can also customize it easily to match
+                            project needs.
+
+                            For beginners, Bootstrap is an excellent way to understand responsive design principles. It
+                            speeds up development and provides a solid foundation for creating professional-looking
+                            websites efficiently.
+                        </p>
+                    </div>
+                </div>
+                <div class="abt-card1 blog-card">
+                    <h2 class="title-2 blog-title">What is Tailwind CSS?
+                    </h2>
+                    <div class="abtPara-box">
+                        <p class="para">
+                            Tailwind CSS is a utility-first CSS framework that lets developers design directly in their
+                            HTML. Instead of writing separate CSS files, you can apply small utility classes like p-4,
+                            bg-blue-500, or text-center to style elements quickly.
+
+                            This approach gives developers more flexibility and control. It allows for custom designs
+                            without depending on pre-made components, unlike traditional frameworks. Tailwind is also
+                            highly customizable—you can define your own color palette, fonts, and spacing in its
+                            configuration file.
+
+                            It’s lightweight and optimized for performance because it removes unused CSS during the
+                            build process. Tailwind integrates well with modern frameworks like React and Next.js,
+                            making it popular for modern front-end development.
+
+                            In short, Tailwind CSS simplifies and speeds up design while keeping code clean and
+                            consistent. It’s a modern approach to writing CSS that blends efficiency with creativity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="ftr-sec">
+        <div class="container">
+            <div class="row ftr-row">
+                <div class="col-3">
+                    <div class="ftr-logo">
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="./assets/images/logos.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="ftr-contact">
+                        <ul class="ftr-list">
+                            <li class="email">
+                                <a href="mailto:roysidharth1996@gmail.com" target="_blank"
+                                    class="contact-link ftr-link">
+                                    <i class="bi bi-envelope"></i>
+                                    roysidharth1996@gmail.com
+                                </a>
+                            </li>
+                            <li class="number">
+                                <a href="tel:8910806300" target="_blank" class="contact-link ftr-link">
+                                    <i class="bi bi-telephone-outbound"></i>
+                                    8910806300</a>
+                            </li>
+                            <li class="location">
+                                <a href="https://maps.app.goo.gl/LupdzodSA6phi8R17" target="_blank"
+                                    class="contact-link ftr-link">
+                                    <i class="bi bi-geo-alt"></i>
+                                    Kolkata, India
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="social-link">
+                        <ul class="example-2 ftr-example-2">
+                            <li class="icon-content ftr-icon-content">
+                                <a class="ftr-anchor" href="https://www.linkedin.com/in/avijit-roy-22a21a164/"
+                                    target="_blank" aria-label="LinkedIn" data-social="linkedin">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <div class="tooltip">LinkedIn</div>
+                            </li>
+                            <li class="icon-content ftr-icon-content">
+                                <a class="ftr-anchor" href="https://github.com/Lucifer-2606" target="_blank"
+                                    aria-label="GitHub" data-social="github">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-github" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <div class="tooltip">GitHub</div>
+                            </li>
+                            <li class="icon-content ftr-icon-content">
+                                <a class="ftr-anchor" href="https://www.instagram.com/avijitroy0098/" target="_blank"
+                                    aria-label="Instagram" data-social="instagram">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <div class="tooltip">Instagram</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ftrDesigner-details">
+                Designed by
+                <a href="https://avijit-roy.tiiny.site" target="_blank" class="designer-name">Avijit Roy.</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- Email SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
