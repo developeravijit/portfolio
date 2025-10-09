@@ -12,12 +12,6 @@
     --js-color: #e7a020;
 }
 
-
-
-
-
-
-
 .hero-sec {
     padding: 100px 0;
     position: relative;
@@ -67,30 +61,23 @@
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-
 }
 
 .hero-card:hover .heroCard-content {
     transform: rotateX(0deg);
-
 }
-
-
 
 .hero-card:hover svg {
     scale: 0;
 }
 
 .heroCard-description {
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 97%;
 }
-
 
 /* Blog Content Section */
 
@@ -111,16 +98,24 @@
 }
 
 /* Responsive Section */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .hero-card {
         width: 450px;
         height: 450px;
     }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
     .hero-card {
         width: 250px;
         height: 250px;
+    }
+
+    .heroCard-title {
+        font-size: 1.7rem;
+    }
+
+    .heroCard-description {
+        font-size: 12px;
     }
 }

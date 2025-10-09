@@ -20,9 +20,10 @@
     --js-color: #e7a020;
     --bootstrap-color: #563d7c;
     --tailwindCss-color: #4c1d95;
-    --typescript-color: #235A97;
+    --typescript-color: #235a97;
     --nodeJs-color: #68a063;
-    --mongoDB-color: #00ED64;
+    --mongoDB-color: #00ed64;
+    --git-color: #f1502f;
 }
 
 body,
@@ -30,9 +31,7 @@ html {
     overflow-x: hidden;
     background-color: var(--primary-bg-color);
     font-family: "IBM Plex Mono", monospace;
-
 }
-
 
 ul,
 p,
@@ -283,7 +282,6 @@ input:not(:placeholder-shown)~.reset {
 
 .example-2 .icon-content a:hover {
     color: white;
-
 }
 
 .example-2 .icon-content a .filled {
@@ -339,7 +337,6 @@ input:not(:placeholder-shown)~.reset {
     border: none;
     outline: none;
     background-image: none;
-
 }
 
 .navbar-toggler {
@@ -362,12 +359,10 @@ input:not(:placeholder-shown)~.reset {
     align-items: center;
 }
 
-
 .socialLink-collapsed {
     display: none;
     margin-left: auto;
 }
-
 
 /* Banner Section */
 .bnr-sec {
@@ -686,15 +681,11 @@ input:not(:placeholder-shown)~.reset {
     object-fit: cover;
     border-radius: 50%;
     object-position: top;
-
 }
-
-
 
 .key-up {
     animation: keyUp 6s infinite linear;
 }
-
 
 @keyframes keyUp {
 
@@ -738,8 +729,6 @@ input:not(:placeholder-shown)~.reset {
     90% {
         transform: translateY(-6px);
     }
-
-
 }
 
 /* Skills Section */
@@ -787,7 +776,6 @@ input:not(:placeholder-shown)~.reset {
     margin: 64px auto;
     border-radius: 10px;
     border-left: 10px solid var(--devCard-border-color);
-
 }
 
 .bi-display {
@@ -830,7 +818,6 @@ input:not(:placeholder-shown)~.reset {
 .tailwind-card {
     background-color: var(--tailwindCss-color);
     padding: 40px;
-
 }
 
 .tailwind-card>img {
@@ -842,6 +829,11 @@ input:not(:placeholder-shown)~.reset {
 .bootstrap-card {
     background-color: var(--bootstrap-color);
     padding: 40px 38px;
+}
+
+.git-card {
+    background-color: var(--git-color);
+    padding: 36px 30px;
 }
 
 .fa-brands {
@@ -873,6 +865,10 @@ input:not(:placeholder-shown)~.reset {
 
 .tailwind {
     color: var(--tailwindCss-color);
+}
+
+.git {
+    color: var(--git-color);
 }
 
 .skill-icon2 {
@@ -908,7 +904,6 @@ input:not(:placeholder-shown)~.reset {
     object-fit: cover;
     object-position: top;
 }
-
 
 .carousel-indicators {
     padding: 50px 0;
@@ -1090,7 +1085,6 @@ input:not(:placeholder-shown)~.reset {
     text-transform: lowercase;
 }
 
-
 .msgForm,
 .nameForm {
     width: 80%;
@@ -1203,10 +1197,6 @@ input:not(:placeholder-shown)~.reset {
     color: #fff;
 }
 
-
-
-
-
 /* Footer Section */
 
 .ftr-sec {
@@ -1220,7 +1210,6 @@ input:not(:placeholder-shown)~.reset {
 }
 
 .ftr-contact {
-
     text-align: center;
 }
 
@@ -1250,8 +1239,6 @@ input:not(:placeholder-shown)~.reset {
     }
 }
 
-
-
 /* Responsive Section */
 
 @media screen and (max-width: 1200px) {
@@ -1266,10 +1253,7 @@ input:not(:placeholder-shown)~.reset {
         border: 1px solid var(--secondary-bg-color);
     }
 
-
-
     .nav-item,
-
     .navbar-nav {
         margin: 0 !important;
         padding: 0 !important;
@@ -1285,7 +1269,7 @@ input:not(:placeholder-shown)~.reset {
         backdrop-filter: blur(10px);
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        max-width: 100px;
+        max-width: 250px;
     }
 
     .items-list {
@@ -1305,10 +1289,6 @@ input:not(:placeholder-shown)~.reset {
 
     .icon-content {
         margin-right: 20px !important;
-    }
-
-    .example-2>li.icon-content:last-child {
-        margin-right: 70px !important;
     }
 
     .ftr-example-2>li.ftr-icon-content:last-child {
@@ -1350,16 +1330,13 @@ input:not(:placeholder-shown)~.reset {
     }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
     /* Banner Section */
 
     .col-4,
     .col-8 {
         width: 50%;
     }
-
-
-
 
     /* About Section  */
 
@@ -1372,7 +1349,6 @@ input:not(:placeholder-shown)~.reset {
         width: 455px;
         height: 455px;
         margin: 30px auto 0;
-
     }
 
     /* Blog Section */
@@ -1394,6 +1370,9 @@ input:not(:placeholder-shown)~.reset {
         margin-bottom: 25px;
     }
 
+    .loader-wrapper {
+        justify-content: center;
+    }
 
     .col-4,
     .col-8 {
@@ -1443,11 +1422,10 @@ input:not(:placeholder-shown)~.reset {
         height: 400px;
     }
 
-
     /* Skills Section */
 
     .skill-col {
-        width: 50%;
+        width: 30%;
         margin: 0 auto 40px;
     }
 
@@ -1473,7 +1451,6 @@ input:not(:placeholder-shown)~.reset {
         width: 400px;
         height: 320px;
     }
-
 
     /* Blog Section */
 
@@ -1516,7 +1493,6 @@ input:not(:placeholder-shown)~.reset {
 
     .ftr-row {
         text-align: center;
-
     }
 
     .ftr-icon-content {
@@ -1603,7 +1579,7 @@ input:not(:placeholder-shown)~.reset {
     /* Skills Section */
 
     .skill-col {
-        width: 100%;
+        width: 50%;
     }
 
     .devCard-hdr {
@@ -1617,6 +1593,10 @@ input:not(:placeholder-shown)~.reset {
 
     .fa-brands {
         font-size: 40px;
+    }
+
+    .skill-name {
+        font-size: 1.7rem;
     }
 
     .skill-card {
@@ -1654,9 +1634,6 @@ input:not(:placeholder-shown)~.reset {
         font-size: 1.5rem;
     }
 
-
-
-
     /* Contact Section */
 
     .msg-title {
@@ -1671,5 +1648,4 @@ input:not(:placeholder-shown)~.reset {
         padding: 0 20px;
         margin: 20px 0;
     }
-
 }
