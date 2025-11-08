@@ -1,3 +1,18 @@
+// Page Loader
+window.onload = function () {
+  setTimeout(() => {
+    const loader = document.getElementById("onload-loader");
+    const content = document.getElementById("onload-content");
+
+    loader.classList.add("fade-out");
+
+    setTimeout(() => {
+      loader.classList.add("onload-hidden");
+      content.classList.remove("onload-hidden");
+    }, 500);
+  }, 2000);
+};
+
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize AOS
@@ -8,14 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const query = document.querySelector(".search-input").value;
     alert("You searched for: " + query);
   }
-
   const appGrid = document.querySelector(".appGrid-icon");
   const gridItems = document.querySelectorAll(".grid-items");
 
-  appGrid.addEventListener("click", () => {
-    appGrid.classList.toggle("active");
-    gridItems.classList.toggle("active");
-  });
+  if (appGrid) {
+    appGrid.addEventListener("click", () => {
+      appGrid.classList.toggle("active");
+
+      gridItems.forEach((item) => {
+        item.classList.toggle("active");
+      });
+    });
+  }
 
   // Email JS Integration
   // Email CDK
@@ -183,14 +202,76 @@ document.addEventListener("DOMContentLoaded", function () {
   // Refresh AOS to remove animation delays
   AOS.refresh();
 
-  // Smooth Scroling page
+  // Work page swipper
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
+  let swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 3,
+      slideShadows: true,
+    },
+
+    keyboard: {
+      enabled: true,
+    },
+    loop: true,
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 2,
+      },
+      1560: {
+        slidesPerView: 3,
+      },
+    },
+  });
+});
+
+// Cursor Initialization
+
+const cursor = document.querySelector(".cursor");
+const anchor = document.querySelectorAll("a");
+const cursorBtn = document.querySelectorAll("button");
+
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+});
+
+document.addEventListener("mousedown", function () {
+  cursor.classList.add("click");
+});
+
+document.addEventListener("mouseup", function () {
+  cursor.classList.remove("click");
+});
+
+anchor.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hover");
+  });
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
+  });
+});
+
+cursorBtn.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hover");
+  });
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
   });
 });
